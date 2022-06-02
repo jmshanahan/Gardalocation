@@ -1,3 +1,8 @@
+window.addEventListener('load',checkJSLoaded)
+
+function checkJSLoaded() {
+
+
 require(["esri/config", "esri/Map", "esri/views/MapView","esri/layers/FeatureLayer","esri/renderers/SimpleRenderer"], function (esriConfig, Map, MapView,FeatureLayer, SimpleRenderer) {
     esriConfig.apiKey = "AAPK340d910693ae44d888a6eb2e2b3224fcx9GYb-Ur-SC4Ubg-kT1zoSv0Y2H5Jb6qQ367krBx-Olc42mFGCzl9LzNO2V_MLdV";
     const gardaRenderer = {
@@ -57,4 +62,4 @@ require(["esri/config", "esri/Map", "esri/views/MapView","esri/layers/FeatureLay
       center: [-7, 53] // Sets center point of view using longitude,latitude
     });
   });
-
+}
