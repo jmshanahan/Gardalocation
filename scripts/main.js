@@ -2,7 +2,6 @@ window.addEventListener('load',checkJSLoaded)
 
 function checkJSLoaded() {
 
-
 require(["esri/config", "esri/Map", "esri/views/MapView","esri/layers/FeatureLayer","esri/renderers/SimpleRenderer"], function (esriConfig, Map, MapView,FeatureLayer, SimpleRenderer) {
     esriConfig.apiKey = "AAPK340d910693ae44d888a6eb2e2b3224fcx9GYb-Ur-SC4Ubg-kT1zoSv0Y2H5Jb6qQ367krBx-Olc42mFGCzl9LzNO2V_MLdV";
     const gardaRenderer = {
@@ -14,8 +13,8 @@ require(["esri/config", "esri/Map", "esri/views/MapView","esri/layers/FeatureLay
       "outline": {
         width: 2,
         color: "white"
+        }
       }
-              }
   }
 
   const trailheadsLabels = {
@@ -55,6 +54,8 @@ require(["esri/config", "esri/Map", "esri/views/MapView","esri/layers/FeatureLay
       layers:[fl]
     });
     // map.add(fl);  // adds the layer to the map
+    let viewNode = document.getElementById("viewDiv");
+    // console.log("log node");
     const view = new MapView({
       container: "viewDiv", // Reference to the view div created in step 5
       map: map, // Reference to the map object created before the view
