@@ -9,15 +9,15 @@ require(["esri/config",
 "esri/renderers/SimpleRenderer",
 "esri/PopupTemplate",
 "esri/popup/content/CustomContent",
-"esri/widgets/ScaleBar"
+"esri/widgets/ScaleBar",
+"esri/widgets/Compass"
 ], function (esriConfig, 
   Map, 
   MapView,
   FeatureLayer,
   ScaleBar,
-  PopupTemplate,
-  CustomContent, 
-  SimpleRenderer) {
+  Compass,
+  ) {
     esriConfig.apiKey = "AAPK340d910693ae44d888a6eb2e2b3224fcx9GYb-Ur-SC4Ubg-kT1zoSv0Y2H5Jb6qQ367krBx-Olc42mFGCzl9LzNO2V_MLdV";
     const gardaRenderer = {
     "type": "simple",
@@ -81,10 +81,17 @@ require(["esri/config",
       zoom: 10, // Sets zoom level based on level of detail (LOD)
       center: [-7, 53] // Sets center point of view using longitude,latitude
     });
-    // const scaleBar = new ScaleBar({
-    //   view: view,
-    //   unit: "dual" 
-    // });
-    // view.ui.add(scaleBar,{position: "bottom-left"});
+    const compassWidget = new Compass({
+     view: view
+    });
+
+    view.ui.add(compassWidget, "top-left");
+    const scaleBar = new ScaleBar({
+      view: view,
+      unit: "dual" ,
+      visible: true
+    });
+    view.ui.add(scaleBar,{position: "bottom-left"});
   });
+    
 }
