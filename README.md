@@ -13,7 +13,7 @@ If testing on desktop use the mouse to drag the browser to a smaller position an
 
 # Dataset
 The dataset used to develop this application was downloaded from the [Geohive](https://www.geohive.ie/datasets/9058900a71864f7a87b6863dfebb7390_0/about)
-There does appear to be some errors in the dataset, for example when you click on the Carrick-on-Suir garda station its Division is marked as Ennis. This is unlikly.
+There does appear to be some errors in the dataset, for example when you click on the Carrick-on-Suir garda station its Division is marked as Ennis. This is unlikely.
 
 
 # Issues
@@ -51,7 +51,7 @@ This would not work
     });
 
 ```
-The only way this would work was to remove the surrounding ```div``` from the ```MapView'```
+The only way this would work was to remove the surrounding ```div``` from the ```MapView```
 
 The dom would look like this
 ```
