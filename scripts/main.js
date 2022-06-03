@@ -9,10 +9,12 @@ require(["esri/config",
 "esri/renderers/SimpleRenderer",
 "esri/PopupTemplate",
 "esri/popup/content/CustomContent",
+"esri/widgets/ScaleBar"
 ], function (esriConfig, 
   Map, 
   MapView,
   FeatureLayer,
+  ScaleBar,
   PopupTemplate,
   CustomContent, 
   SimpleRenderer) {
@@ -49,7 +51,7 @@ require(["esri/config",
       expression: "$feature.COUNTY"
     }
   };
-  
+ 
 
   const popupGarda = {
     "title": "Station",
@@ -79,5 +81,10 @@ require(["esri/config",
       zoom: 10, // Sets zoom level based on level of detail (LOD)
       center: [-7, 53] // Sets center point of view using longitude,latitude
     });
+    // const scaleBar = new ScaleBar({
+    //   view: view,
+    //   unit: "dual" 
+    // });
+    // view.ui.add(scaleBar,{position: "bottom-left"});
   });
 }
