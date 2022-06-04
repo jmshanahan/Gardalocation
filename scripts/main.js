@@ -52,15 +52,15 @@ require(["esri/config",
   
 
   const popupGarda = {
-    "title": "Station",
-    "content": "<b>Name:</b> {STATION_NA}<br><b>Division:</b> {DIVISION_H}<br>"
+    "title": "<p style='color:#1792d2;font-size: 20px;'> Station Details</p>",
+    "content": "<p style='color:red;text-align:center;font-size: 20px;'>{STATION_NA}<br></p><p><b>Division:</b> {DIVISION_H}<br> <b>Address:</b> {ADDRESS}<br> <b>Phone:</b> {PHONE_NUMB}<br></p>"
   }
          
     const fl = new FeatureLayer({
     url: "https://services7.arcgis.com/wN3nddBpje6kLtAh/arcgis/rest/services/garda_stations__an_garda_siochana/FeatureServer/0",
     renderer: gardaRenderer,
     labelingInfo: [trailheadsLabels],
-    outFields: ["STATION_NA","DIVISION_H"],
+    outFields: ["STATION_NA","DIVISION_H","ADDRESS","PHONE_NUMB"],
     popupTemplate: popupGarda
     });
   
