@@ -32,7 +32,7 @@ The certificate and the key file were automatically saved to
 To test if the installation is secure I  put it through [Qualys SSL Labs](https://ssllabs.com)
 It came back with an overall rating of A.
 
-To get it to A+ I had to implement HSTS (HTTP Strict Transport Security). HSTS tells web browsers that they shouls always interact with the server over https.
+To get it to A+ I had to implement HSTS (HTTP Strict Transport Security). HSTS tells web browsers that they should always interact with the server over https.
 
 ```
 add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
