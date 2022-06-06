@@ -7,8 +7,7 @@ To display garda information click on the black icons and an informational popup
 The source code is available at [Github](https://github.com/jmshanahan/Gardalocation).
 
 ## Features
-This web application has been designed to work on Desktop, Tablet and Phone.
-If testing on desktop use the mouse to drag the browser to a smaller position and you will see the menu and contents change and relaign itself.
+This web application has been designed to work on Desktop, Tablet and Phone. Testing the application on my phone it appears that some parts could be adjusted. But the main point to get across here is that media queries have been implemented in the css to cater for all three devices.
 
 
 ## Dataset
@@ -19,7 +18,7 @@ The phone numbers do not look to be correct either.
 
 # Issues
 
-## Nesting flexbox
+## Nesting Flexbox
 I wanted to nest the MapView inside a flexbox container so I could another column to the right of it. But when I did initially he map would not display.
 
 This would work
@@ -110,21 +109,23 @@ The certificate and the key file were automatically saved to
 ```
 The script now appears to implement the Diffie Hellman Key Exchange which was not always the case.
 Diffie Hellman is mandated for TLS 1.3. As can be seen from the configuration TLS 1.3 has been implemented on this site.
-```
-ssl_protocols TLSv1.2 TLSv1.3;
-```
-TLS (Transport Layer Security) provides secure communication between web browsers and servers ant TLS 1.3 is faster and more secure than its predecessors.
-The way the configuration above has been set up it is backward compatible to TLS 1.2.
-
 The Diffe Hellman parameters are stored in the following file.
 ```
 etc/letsencrypt/ssl-dhparams.pem;
 ```
 
+TLS (Transport Layer Security) provides secure communication between web browsers and servers and TLS 1.3 is faster and more secure than its predecessors.
+This site has been set up to be backward compatible to TLS 1.2.
+
+```
+ssl_protocols TLSv1.2 TLSv1.3;
+```
+
+
 
 ## Qualys SSL Labs test
 To test if the installation is secure it was put it through [Qualys SSL Labs](https://ssllabs.com)
-It came back with an overall rating of A.
+It came back with an overall rating of <code>A</code>.
 
 To get it to <code>A+</code>  HSTS (HTTP Strict Transport Security) had to be implemented. HSTS tells web browsers that they should always interact with the server over https.
 
@@ -133,7 +134,7 @@ add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; prelo
 ```
 
 ### Cross Site Scripting
-I did not defend the site against Cross-Site Scripting as I suspect this would basically prevent the esri maps from  being displayed as these bypass the Nginx server.
+I did not defend the site against Cross-Site Scripting as I suspect this would basically prevent the esri maps from being displayed as these bypass the Nginx server.
 
 **Note: I haven't tested it though.**
 The following line should be added to the configuration to defend against X-XSS
