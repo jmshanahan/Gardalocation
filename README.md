@@ -1,6 +1,9 @@
 # Introduction
 A simple garda location application using esri development environment. The garda stations are marked with black dots. The data is served from a feature layer published through ArcGIS online services.
 
+## Small Change to the original
+I have put the site back up again under the web site name www.jshanahan.com. It was www.jshanahan.biz and this time around I haven't implemented the Diffie Hellman Key Exchange.
+
 ## Instructions
 
 To display garda information click on the black icons and an informational popup will appear with the relevent information.
@@ -84,7 +87,7 @@ If you go to the github, main.js file on the scalebar branch you will see the co
 
 ## Linode Cloud Services
 The website is being served by a Centos Server running on the Linode Cloud.
-It has an Nginx webserver configured to serve out the webpage on www.jshanahan.biz.
+It has an Nginx webserver configured to serve out the webpage on www.jshanahan.com.
 
 ## Http certificates
 Http certificates were created at Letsencrypt using their [certbot](https://certbot.eff.org/) application.
